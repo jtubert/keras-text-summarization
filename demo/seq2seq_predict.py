@@ -11,7 +11,8 @@ def main():
     model_dir_path = './models'
 
     print('loading csv file ...')
-    df = pd.read_csv(data_dir_path + "/fake_or_real_news.csv")
+    #df = pd.read_csv(data_dir_path + "/fake_or_real_news.csv")
+    df = pd.read_csv('https://docs.google.com/spreadsheets/d/1OBMRD8i4GgfOqWteu9i8Z0bbfMW5Xt0kVnQEmHWT0Fk/edit?output=csv', index_col=0)
     X = df['text']
     Y = df.title
 
