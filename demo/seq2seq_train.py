@@ -20,8 +20,7 @@ def main():
 
     print('loading csv file ...')
     #df = pd.read_csv(data_dir_path + "/fake_or_real_news.csv")
-    df = pd.read_csv('https://docs.google.com/spreadsheets/d/1OBMRD8i4GgfOqWteu9i8Z0bbfMW5Xt0kVnQEmHWT0Fk/edit?output=csv', index_col=0)
-
+    df = pd.read_csv('https://docs.google.com/spreadsheets/u/2/d/1OBMRD8i4GgfOqWteu9i8Z0bbfMW5Xt0kVnQEmHWT0Fk/export?format=csv&gid=235253119', index_col=0, parse_dates=['date'])
     print('extract configuration from input texts ...')
     Y = df.title
     X = df['text']
